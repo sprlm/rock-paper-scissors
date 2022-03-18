@@ -20,7 +20,7 @@ function playRound(playerSelection, computerSelection) {
     switch (playerSelection) {
         case "rock":
             if (computerSelection === "rock") {
-                return "It's a draw!";
+                return "It's a draw! You both picked rock.";
             } else if (computerSelection === "paper") {
                 return "You lose! Paper beats rock.";
             } else {
@@ -31,7 +31,7 @@ function playRound(playerSelection, computerSelection) {
             if (computerSelection === "rock") {
                 return "You win! Paper beats rock.";
             } else if (computerSelection === "paper") {
-                return "It's a draw!";
+                return "It's a draw! You both picked paper.";
             } else {
                 return "You lose! Scissors beats paper.";
             }
@@ -42,7 +42,7 @@ function playRound(playerSelection, computerSelection) {
             } else if (computerSelection === "paper") {
                 return "You win! Scissors beats paper.";
             } else {
-                return "It's a draw!";
+                return "It's a draw! You both picked scissors.";
             }
             break;
     }
