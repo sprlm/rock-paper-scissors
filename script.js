@@ -48,6 +48,20 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function getPlayerSelection() {
+    let playerSelection; 
+    
+    do {
+        playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
+
+        if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") {
+            return playerSelection;
+        } else {
+            console.log("Incorrect input. Please type rock, paper, or scissors.");
+        }
+    } while (playerSelection !== "rock" || playerSelection !== "paper" || playerSelection !== "scissors");
+}
+
 function game() {
     let playerSelection;
     let computerSelection;
@@ -56,7 +70,7 @@ function game() {
     let computerScore = 0;
 
     for (let i = 0; i < 5; i++) {
-        playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
+        playerSelection = getPlayerSelection();
         computerSelection = computerPlay();
 
         gameResult = playRound(playerSelection, computerSelection);
