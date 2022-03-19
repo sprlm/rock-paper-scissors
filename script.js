@@ -66,7 +66,7 @@ function onClickFunction(e) {
             button.disabled = true;
         });
     } else if (computerScore >= 5) {
-        result.textContent = `${gameResult} Through sheer skill, the computer has deafeated you.`;
+        result.textContent = `${gameResult} Through sheer skill, the computer has defeated you.`;
         document.querySelectorAll('.choice-button').forEach(button => {
             button.disabled = true;
         });
