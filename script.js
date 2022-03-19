@@ -61,29 +61,3 @@ function getPlayerSelection() {
         }
     } while (playerSelection !== "rock" || playerSelection !== "paper" || playerSelection !== "scissors");
 }
-
-function game() {
-    let playerSelection;
-    let computerSelection;
-    let gameResult;
-    let playerScore = 0;
-    let computerScore = 0;
-
-    for (let i = 0; i < 5; i++) {
-        playerSelection = getPlayerSelection();
-        computerSelection = computerPlay();
-
-        gameResult = playRound(playerSelection, computerSelection);
-        console.log(gameResult);
-
-        if (gameResult.charAt(4) === "w") {
-            playerScore++;
-        } else if (gameResult.charAt(4) === "l") {
-            computerScore++;
-        }
-    }
-
-    console.log(`The final score is ${playerScore}-${computerScore}.`);
-}
-
-game();
