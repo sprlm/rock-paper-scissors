@@ -54,7 +54,7 @@ let computerSelection;
 const choiceButton = document.querySelectorAll('.choice-button');
 choiceButton.forEach(button => {
     button.addEventListener('click', (e) => {
-        playerSelection = e.target.innerText.toLowerCase();
+        playerSelection = e.target.textContent.toLowerCase();
         computerSelection = computerPlay();
         console.log(playRound(playerSelection, computerSelection));
     });
