@@ -47,17 +47,3 @@ function playRound(playerSelection, computerSelection) {
             break;
     }
 }
-
-function getPlayerSelection() {
-    let playerSelection; 
-    
-    do {
-        playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
-
-        if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") {
-            return playerSelection;
-        } else {
-            console.log("Incorrect input. Please type rock, paper, or scissors.");
-        }
-    } while (playerSelection !== "rock" || playerSelection !== "paper" || playerSelection !== "scissors");
-}
