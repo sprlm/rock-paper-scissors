@@ -1,3 +1,3 @@
 # rock-paper-scissors
 
-A simple console-based rock paper scissors game using Javascript
+A simple rock paper scissors game using Javascript and DOM manipulation
