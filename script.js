@@ -51,8 +51,19 @@ function playRound(playerSelection, computerSelection) {
 function onClickFunction(e) {
     let playerSelection = e.target.textContent.toLowerCase();
     let computerSelection = computerPlay();
-    result.textContent = playRound(playerSelection, computerSelection);
+    let gameResult;
+
+    gameResult = playRound(playerSelection, computerSelection);
+    if (gameResult.charAt(4) === "w") {
+        playerScore++;
+    } else if (gameResult.charAt(4) === "l") {
+        computerScore++;
+    }
+    result.textContent = `${gameResult} Score: ${playerScore}-${computerScore}`;
 }
+
+let playerScore = 0;
+let computerScore = 0;
 
 const result = document.querySelector('.result');
 
