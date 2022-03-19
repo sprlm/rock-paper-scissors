@@ -59,7 +59,20 @@ function onClickFunction(e) {
     } else if (gameResult.charAt(4) === "l") {
         computerScore++;
     }
-    result.textContent = `${gameResult} Score: ${playerScore}-${computerScore}`;
+
+    if (playerScore >= 5) {
+        result.textContent = `${gameResult} You are officially smarter than a computer.`;
+        document.querySelectorAll('.choice-button').forEach(button => {
+            button.disabled = true;
+        });
+    } else if (computerScore >= 5) {
+        result.textContent = `${gameResult} Through sheer skill, the computer has deafeated you.`;
+        document.querySelectorAll('.choice-button').forEach(button => {
+            button.disabled = true;
+        });
+    } else {
+        result.textContent = `${gameResult} Score: ${playerScore}-${computerScore}`;
+    }
 }
 
 let playerScore = 0;
