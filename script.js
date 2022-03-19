@@ -48,16 +48,15 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-let playerSelection;
-let computerSelection;
+function onClickFunction(e) {
+    let playerSelection = e.target.textContent.toLowerCase();
+    let computerSelection = computerPlay();
+    result.textContent = playRound(playerSelection, computerSelection);
+}
 
 const result = document.querySelector('.result');
 
 const choiceButton = document.querySelectorAll('.choice-button');
 choiceButton.forEach(button => {
-    button.addEventListener('click', (e) => {
-        playerSelection = e.target.textContent.toLowerCase();
-        computerSelection = computerPlay();
-        result.textContent = playRound(playerSelection, computerSelection);
-    });
+    button.addEventListener('click', e => onClickFunction(e));
 });
